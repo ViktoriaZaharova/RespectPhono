@@ -1,0 +1,2474 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:hover,
+body textarea:hover
+  color: $input-color
+  border-color: $input-color
+  &::placeholder
+    color: $input-color
+
+
+body input:focus,
+body textarea:focus
+  color: $footer-bg
+  border-color: $footer-bg
+  &::placeholder
+    color: $footer-bg
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  min-width: 320px
+  position: relative
+  line-height: 18px
+  font:
+    family: "Barlow", sans-serif
+    size: 14px
+  background: #fff
+  color: $input-border-focus
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  color: $input-border-focus
+  outline: none
+
+
+h1, h2
+  font:
+    family: 'Poppins', sans-serif
+    weight: 600
+  line-height: 44px
+  color: $footer-bg
+  width: 100%
+  text-align: center
+
+h1
+  font-size: 40px
+
+h2
+  font-size: 32px
+  margin: 80px auto 40px
+
+.container
+  width: 1246px
+  padding: 0 15px
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  margin: 0 auto
+
+//button group
+button
+  transition: .3s ease
+  outline: none
+  border: none
+    radius: 3px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  padding: 11px
+  font:
+    size: 16px
+    family: 'Barlow Condensed', sans-serif
+    weight: 500
+  letter-spacing: 1px
+  line-height: 20px
+  text-transform: uppercase
+  box-sizing: border-box
+  background: transparent
+
+button[type='submit']
+  padding: 0
+
+.btn-default
+  padding: 11px
+  border: 1px solid $btn-default
+    radius: 3px
+  color: $btn-text
+  &:hover
+    border-color: $btn-hover
+    color: $btn-text
+  &:focus
+    box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.1)
+    border-color: $btn-hover
+
+.btn-cart
+  position: relative
+  .number-of-goods
+    margin-left: 5px
+
+.btn-accent
+  background: $accent
+  text-transform: uppercase
+  color: $btn-text2
+  padding: 11px
+  border-radius: 3px
+  font:
+    size: 16px
+    family: 'Barlow Condensed', sans-serif
+    weight: 500
+
+  &:hover
+    background: $btn-hover2
+
+  &:focus
+    box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.1)
+    background: $btn-hover2
+
+.btn-grey
+  padding: 11px 14px
+  background: $btn-default
+  color: #FFFFFF
+  border: none
+    radius: 3px
+
+  &:hover
+    background: $btn-hover
+
+  &:focus
+    background: $btn-hover
+    box-shadow: inset 0 3px 1px rgba(0, 0, 0, 0.1)
+
+.language, .currency
+  position: relative
+
+  > a
+    color: $input-border-focus
+    position: relative
+    padding: 6px 7px
+    width: 54px
+    cursor: inherit
+    &:before
+      content: ''
+      position: absolute
+      border: 5px solid transparent
+        top: 5px solid $input-border-hover
+      width: 0
+      height: 0
+      right: 8px
+      top: 14px
+      transition: .3s ease
+//button group end
+
+//currency
+.currency
+  height: 32px
+  .btn-default
+    height: 100%
+  .fa
+    color: $input-border-focus
+    font-weight: normal
+//currency end
+
+
+//input group
+input, textarea
+  color: $input-color
+  font:
+    size: 14px
+    weight: 500
+    family: 'Barlow', sans-serif
+  padding: 8px 8px 8px 12px
+  line-height: 16px
+  box-sizing: border-box
+  border: 1px solid $input-border
+    radius: 3px
+  display: flex
+  align-items: center
+  transition: .3s ease
+  outline: none
+  width: 100%
+  &:hover
+    border-color: $input-border-hover
+
+  &:focus
+    border-color: $input-border-focus
+    color: $menu-bg
+//input group end
+
+textarea
+  padding: 10px 16px
+  font:
+    weight: normal
+    size: 16px
+  color: #7A7F85
+  width: 100%
+  height: 120px
+  outline: none
+  transition: .3s ease
+
+//form group
+.form-search
+  position: relative
+  width: 280px
+
+  button
+    position: absolute
+    right: 8px
+    top: 10px
+//form group end
+
+//drop-menu group
+.dropdown-menu
+  position: absolute
+  border: 1px solid $input-border
+    radius: 3px
+  left: 0
+  top: 34px
+  display: none
+  flex-direction: column
+  align-items: center
+  background: #FFFFFF
+  width: 100%
+  z-index: 7
+  li
+    padding: 7px
+    a
+      &:hover
+        color: $accent
+//drop-menu group end
+
+//icon-favorites
+.icon-favorites
+  cursor: pointer
+  svg
+    path
+      fill: #ADB0B2
+      transition: .3s ease
+  &:hover
+    svg
+      path
+        fill: #50565C
+//icon-favorites end
+
+
+//list group
+.header__list
+  display: flex
+  flex-direction: row
+  align-items: center
+  flex-wrap: wrap
+  justify-content: center
+
+  > li
+    margin-left: 64px
+
+    a
+      text-transform: uppercase
+      display: flex
+      flex-direction: row
+      align-items: center
+      font:
+        size: 12px
+        weight: 500
+      .icon
+        margin-right: 5px
+        display: flex
+        align-items: center
+
+  .account
+    a
+      svg
+        fill: $btn-text
+        transition: .3s ease
+
+    &:hover
+      a
+        color: $accent
+
+        .icon
+          svg
+            fill: $accent
+
+  .cart
+    font:
+      weight: 500
+      family: 'Barlow Condensed', sans-serif
+    transition: .3s ease
+    a
+      letter-spacing: 0.05em
+      font-size: 16px
+      color: #fff
+
+    &:hover
+      a
+        color: #fff
+//list group end
+
+//slider
+.slick-prev, .slick-next
+  width: 32px
+  height: 32px
+
+  &:hover
+    &:before
+      border-color: $btn-default
+
+  &:before
+    content: ''
+    position: absolute
+    background: url("../img/arrow.svg") no-repeat center
+    width: 32px
+    height: 32px
+    border: 1px solid $input-border
+      radius: 50%
+    transition: .3s ease
+    left: 0
+    top: 0
+
+.slide
+  outline: none
+
+.slick-next
+  right: 0
+
+.slick-prev
+  left: 0
+  &:before
+    transform: rotate(180deg)
+
+.slider-arrows
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  li
+    position: relative
+    width: 32px
+    height: 32px
+    cursor: pointer
+    transition: .3s ease
+    &:before
+      content: ''
+      position: absolute
+      background: url("../img/arrow.svg") no-repeat center
+      width: 32px
+      height: 32px
+      border: 1px solid $input-border
+        radius: 50%
+      transition: .3s ease
+      left: 0
+      top: 0
+    &:hover
+      &:before
+        border-color: $btn-default
+  .arrow-prev
+    margin-right: 8px
+    &:before
+      transform: rotate(180deg)
+
+//slider end
+
+//menu group
+.menu
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+  width: 100%
+  li
+    display: flex
+    margin-right: 36px
+    position: relative
+    &:hover
+      .dropdown-menu
+        opacity: 1
+        visibility: visible
+    .dropdown-menu
+      display: flex
+      width: 164px
+      background: $footer-bg
+      border: none
+        radius: 0
+      top: 46px
+      left: -20px
+      padding: 20px
+      opacity: 0
+      visibility: hidden
+      transition: .5s ease
+      li
+        margin: 0 0 20px
+        padding: 0
+        width: 100%
+        &:last-child
+          margin: 0
+        a
+          padding: 0
+          text-align: left
+          &:after
+            display: none
+    a
+      padding: 14px 0
+      box-sizing: border-box
+      text-transform: uppercase
+      color: #FFFFFF
+      letter-spacing: 0.05em
+      text-align: center
+      font:
+        size: 16px
+        weight: 500
+        family: 'Barlow Condensed', sans-serif
+      position: relative
+      overflow: hidden
+      z-index: 2
+      width: 100%
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        margin: 0 auto
+        bottom: 0
+        width: 0
+        height: 2px
+        background: $accent
+        transition: .4s ease
+      &:hover
+        color: $accent
+        &:after
+          width: 100%
+
+.links-modal
+  min-width: 234px
+  padding: 14px 0
+  z-index: 2
+  box-sizing: border-box
+  position: relative
+  overflow: hidden
+  font:
+    size: 16px
+    weight: 500
+    family: 'Barlow Condensed', sans-serif
+  text-align: center
+  text-transform: uppercase
+  color: #FFFFFF
+  background: $btn-text
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    top: -7px
+    background: url("../img/logo2.svg") no-repeat center
+    width: 56px
+    height: 56px
+    opacity: .4
+    z-index: -1
+    transition: .4s ease
+
+.btn-mobile-search
+  display: none
+          
+.btn-mobile-menu
+  padding: 5px 3px
+  background: $menu-bg
+  display: none
+  cursor: pointer
+  span
+    width: 18px
+    height: 2px
+    background: #fff
+    display: block
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
+
+#mobile-menu
+  position: fixed
+  top: 0
+  left: -100%
+  background: $footer-bg
+  box-shadow: 0 8px 24px rgba(48, 53, 59, 0.14)
+  z-index: 10
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 0 0 16px 0
+  margin: 0
+  width: 270px
+  height: 100%
+  box-sizing: border-box
+  overflow-y: auto
+  .close
+    position: relative
+    right: 0
+    top: 0
+    left: 0
+    width: 100%
+    padding: 16px
+    box-sizing: border-box
+    border-bottom: 1px solid rgba(#FFFFFF, .1)
+    &:hover
+      svg
+        fill: $accent
+  .mobile-menu-body
+    //overflow: scroll
+    width: 100%
+  .menu
+    flex-direction: column
+    align-items: flex-start
+    margin: 0
+    li
+      margin: 0
+      width: 100%
+      border-bottom: 1px solid rgba(#FFFFFF, .1)
+      a
+        text-align: left
+        color: #F2F2F5
+        padding: 14px 16px
+        width: 100%
+        box-sizing: border-box
+  .header__list
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+    > li
+      margin: 0
+      padding: 18px 16px
+      &:nth-child(2)
+        padding-top: 10px
+      a
+
+        width: 100%
+        color: #F2F2F5
+    .language, .currency
+      padding: 0 16px 14px
+      a, .fa
+        width: 54px
+        color: #F2F2F5
+      .dropdown-menu
+        li
+          a, .fa
+            width: auto
+            color: $input-border-focus
+    .currency
+      height: 46px
+  .links-modal
+    margin: 0 16px
+    padding: 7px 0
+
+#overlay
+  background: rgba($footer-bg, .2)
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 5
+  display: none
+//menu group end
+
+header
+  display: flex
+  flex-direction: column
+
+  .header__top
+    .container
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      padding: 24px 15px
+
+      .form-search
+        margin-left: auto
+
+
+.header__menu
+  background: $menu-bg
+  .container
+    flex-direction: row
+    align-items: center
+    flex-wrap: nowrap
+    justify-content: space-between
+
+.main
+  background: linear-gradient(0deg, #F0F3F5 0%, #E4E8EB 100%)
+  position: relative
+  overflow: hidden
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    background: url("../img/bg-form1.png") repeat-x center
+    height: 129px
+    width: 100%
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -55px
+    background: url("../img/bg-form2.png") repeat-x center
+    height: 170px
+    width: 100%
+
+  .text-overley
+    position: absolute
+    left: 0
+    right: 0
+    top: 25%
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+
+  .container
+    flex-direction: column
+    z-index: 3
+    padding: 95px 15px 0
+
+    .main__info
+      width: 393px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin: 0 250px 225px
+      position: relative
+      z-index: 2
+      h1
+        margin-bottom: 24px
+        text-align: left
+
+      p
+        color: $footer-bg
+        line-height: 28px
+        font-size: 18px
+
+      .btn-accent
+        text-transform: uppercase
+        margin: 16px 0 0
+
+    .main__image
+      position: absolute
+      bottom: 22px
+      right: 100px
+      .circle
+        position: absolute
+        display: block
+        border-radius: 50%
+      .circle-red
+        background: #F22318
+          blend-mode: multiply
+        opacity: 0.77
+        width: 72px
+        height: 72px
+        top: 0
+        left: 85px
+      .circle-orange
+        background: #F7C631
+        opacity: 0.75
+        top: 34px
+        right: 27px
+        width: 56px
+        height: 56px
+      .circle-grey
+        width: 60px
+        height: 60px
+        background: $input-border
+        bottom: 39px
+        left: 246px
+        z-index: -1
+
+.advantages
+  background: #FFFFFF
+
+  .container
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+.advantages__item
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-right: 48px
+  font:
+    size: 14px
+    weight: 500
+  color: $menu-bg
+
+  &:last-child
+    margin: 0
+
+  .icon
+    border-radius: 50%
+    background: #F0F1F2
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 16px 0 0
+    width: 48px
+    height: 48px
+    min-width: 48px
+
+.card
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 16px
+  box-sizing: border-box
+  width: 208px
+  transition: .3s ease
+  cursor: pointer
+  margin: 0 auto
+  outline: none
+  background: #fff
+  &:focus
+    outline: none
+  .icon-favorites
+    position: absolute
+    right: 16px
+    top: 16px
+    width: 16px
+    height: 16px
+    display: block
+    z-index: 2
+    svg
+      path
+        fill: $input-border-hover
+        transition: .3s ease
+    &:hover
+      svg
+        path
+          fill: $input-border-focus
+  .image
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 160px
+    height: 160px
+    margin: 0 auto 16px
+
+  .title
+    font:
+      size: 16px
+      weight: 500
+      family: 'Barlow', sans-serif
+    color: $footer-bg
+    line-height: 20px
+    margin-bottom: 12px
+
+  .card__bottom
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    .cart
+      .icon
+        svg
+          fill: $btn-text
+          transition: .3s ease
+        &:hover
+          svg
+            fill: $accent
+
+  &:hover
+    background: #FFFFFF
+    box-shadow: 0 8px 24px rgba(48, 53, 59, 0.14)
+    z-index: 2
+
+.price
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  .old-pride
+    text-decoration-line: line-through
+    font:
+      weight: 600
+      size: 14px
+    color: $input-border-hover
+
+  .new-price
+    color: $footer-bg
+    font:
+      size: 18px
+      weight: 600
+    position: relative
+    z-index: 2
+    margin-right: 5px
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 8px
+      background: $accent
+      z-index: -1
+
+.box-sale, .box-new
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  left: 16px
+  top: 16px
+  z-index: 2
+  color: #FFFFFF
+  text-transform: uppercase
+  font:
+    size: 14px
+    family: 'Barlow Condensed', sans-serif
+    weight: 600
+  padding: 2px 6px
+  box-sizing: border-box
+  background: $error
+
+.box-new
+  background: $btn-text
+
+
+.recommended
+  h2
+    margin: 80px auto 26px
+
+.recommended__slider, .similar-products__slider
+  width: 95%
+  margin: 0 auto
+  //padding: 0 30px
+  .slide
+    margin: 14px 0 50px
+  .slick-next
+    right: -30px
+    z-index: 3
+  .slick-prev
+    left: -30px
+    z-index: 3
+
+
+.want-retro
+  position: relative
+  overflow: hidden
+  .image
+    position: absolute
+    left: -25%
+    top: 0
+    height: 420px
+    img
+      height: 100%
+      width: auto
+  .container
+    flex-direction: row
+    justify-content: flex-end
+    padding: 94px 15px
+
+    .text
+      width: 50%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      padding: 0 165px 0 0
+      box-sizing: border-box
+      z-index: 2
+
+      h2
+        text-align: left
+        margin: 0 0 24px
+
+      p
+        font:
+          size: 22px
+        line-height: 28px
+        margin-bottom: 24px
+
+
+.bestsellers
+  background: $input-bg
+  .container
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    padding: 80px 15px
+    .bestsellers__content
+      width: 176px
+      margin: 0 104px 0 0
+      height: 300px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      h2
+        margin: 0 0 32px 0
+        text-align: left
+      .btn-accent
+        margin: auto 0 0 0
+        display: inline-flex
+    .bestsellers__slider
+      width: calc(100% - 280px)
+      .card
+        margin: 0 auto
+        max-width: 234px
+        min-width: 234px
+        width: 234px
+
+.categories__content
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+  margin-bottom: 48px
+
+.categories__item
+  position: relative
+  width: 280px
+  max-width: 280px
+  height: 280px
+  margin: 0 0 32px
+  transition: .3s ease
+
+  .categories__item-body
+    position: absolute
+    left: 0
+    bottom: 0
+    padding: 76px 32px 32px
+    box-sizing: border-box
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 144px
+      background: linear-gradient(180deg, rgba(48, 53, 59, 0) 0%, #30353B 100%)
+      transition: .3s ease
+      z-index: 1
+    h3
+      margin: 0
+      color: #FFFFFF
+      font:
+        size: 22px
+        family: 'Poppins', sans-serif
+        weight: 600
+      line-height: 32px
+      z-index: 2
+    .icon
+      min-width: 36px
+      max-width: 36px
+      min-height: 36px
+      max-height: 36px
+      border-radius: 50%
+      background: $accent
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: .3s ease
+      z-index: 2
+  &:hover
+    &:before
+      background: rgba($footer-bg, .6)
+    .categories__item-body
+      .icon
+        background: $btn-default
+
+.ready
+  background: #F7F6F0
+  .container
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0 65px 0 150px
+    .text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      position: relative
+      z-index: 2
+      h2
+        margin: 96px 0 24px
+        text-align: left
+      p
+        font:
+          size: 22px
+        color: #2E343C
+        margin-bottom: 72px
+
+.authorised
+  margin-bottom: 80px
+  .container
+    flex-direction: column
+    align-items: center
+    width: 1342px
+
+.authorised__slider
+  width: 100%
+  padding: 0 50px
+
+.authorised__logo
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    margin: 0 auto
+
+footer
+  background: $menu-bg
+  display: flex
+  flex-direction: column
+  color: rgba(#fff, .7)
+  .logo
+    width: 138px
+    svg
+      width: 100%
+      fill: #fff
+      opacity: .7
+  h4
+    font:
+      size: 14px
+      weight: 600
+    line-height: 18px
+    text-transform: uppercase
+    color: $accent
+    margin-bottom: 16px
+  .box
+    margin-right: 87px
+    &:last-child
+      margin: 0
+  .box-products
+    .footer-menu
+      column-count: 2
+  .footer-menu
+    li
+      a
+        font:
+          size: 14px
+          weight: 500
+        line-height: 18px
+        color: rgba(#fff, .7)
+        margin-bottom: 8px
+        &:hover
+          color: $accent
+  .footer__top
+    .container
+      width: 1342px
+      padding: 64px 0
+      flex-direction: row
+      justify-content: space-around
+      align-items: flex-start
+      border-bottom: 1px solid rgba(#FFFFFF, .1)
+      .footer__top-center
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+      .footer__top-right
+        width: 162px
+        p
+          font:
+            size: 12px
+            weight: 500
+          line-height: 14px
+          margin-bottom: 16px
+        .logo
+          width: 115px
+  .footer__bottom
+    .container
+      padding: 32px 0
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      p
+        font:
+          size: 12px
+          weight: 500
+        line-height: 16px
+        color: rgba(#fff, .4)
+        margin-right: 30px
+      .text
+        display: flex
+        flex-direction: row
+        align-items: center
+        li
+          margin: 0 5px 0 0
+          &:last-child
+            margin: 0
+          a
+            font:
+              size: 12px
+              weight: 500
+            line-height: 16px
+            color: rgba(#fff, .4)
+            &:hover
+              color: $accent
+
+//popup card
+.basket__popup
+  overflow: auto
+  position: fixed
+  z-index: 7
+  right: -100%
+  top: 0
+  background: #FFFFFF
+  height: 100%
+  width: 420px
+  box-sizing: border-box
+  padding: 32px 0
+
+.popup-header
+  padding: 0 32px 8px
+  box-sizing: border-box
+  font:
+    family: 'Poppins', sans-serif
+    size: 16px
+    weight: 600
+  color: $footer-bg
+.popup-footer
+  padding: 0 32px
+  box-sizing: border-box
+  .card-total
+    font:
+      size: 22px
+      weight: 600
+    color: $footer-bg
+    margin: 16px 0 32px
+    text-align: right
+.button-group
+  display: flex
+  flex-direction: column
+  align-items: center
+  a
+    width: 100%
+    text-align: center
+    text-transform: uppercase
+    margin: 0 0 10px
+    font:
+      weight: 600
+      family: 'Barlow Condensed', sans-serif
+      size: 16px
+    &:last-child
+      margin: 0
+
+.close
+  position: absolute
+  top: 16px
+  right: 16px
+  cursor: pointer
+  svg
+    fill: $input-border
+    transition: .3s ease
+  &:hover
+    svg
+      fill: $footer-bg
+
+.card-list
+  display: flex
+  flex-direction: row
+  align-items: center
+  width: 100%
+  margin: 0
+  padding: 24px 32px
+  box-sizing: border-box
+  border-bottom: 1px solid #F2F4F5
+  .image
+    width: 64px
+    height: 64px
+    margin: 0 16px 0 0
+  .card-body
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .title
+      font:
+        weight: 500
+        size: 16px
+      color: $footer-bg
+      line-height: 20px
+      margin: 0
+      height: auto
+      &:hover
+        color: $accent
+    .card__bottom
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin-top: 8px
+      p
+        font:
+          family: 'Barlow', sans-serif
+          weight: 500
+        color: $input-color
+        margin-right: 40px
+        &:last-child
+          margin: 0
+        span
+          color: $footer-bg
+          font-weight: 600
+          margin-left: 3px
+//popup card end
+
+//checkbox
+.checkbox
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  &:last-child
+    margin-bottom: 0
+  .checkbox-inp
+    display: none
+  .checkbox-custom
+    position: relative
+    min-width: 20px
+    width: 20px
+    height: 20px
+    display: inline-block
+    vertical-align: middle
+    background: transparent
+    border: 1px solid #ADB0B2
+      radius: 3px
+    cursor: pointer
+    transition: .3s ease
+    margin-right: 8px
+  .label
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    color: $menu-bg
+    font:
+      weight: 500
+      size: 16px
+  .checkbox-inp
+    &:checked
+      + .checkbox-custom
+          background: $accent
+          border-color: $accent
+          &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: 0 auto
+            width: 100%
+            height: 100%
+            background: url("../img/checkbox.svg") no-repeat center
+//checkbox end
+
+//radio
+.radio
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  .icon
+    display: inline-block
+    float: right
+    img
+      display: inline-block
+      margin-right: 24px
+      vertical-align: middle
+      &:last-child
+        margin: 0
+  .radio-inp
+    display: none
+  .radio-custom
+    position: relative
+    width: 20px
+    height: 20px
+    display: inline-block
+    vertical-align: middle
+    background: transparent
+    border: 1px solid #ADB0B2
+      radius: 50%
+    cursor: pointer
+    transition: .3s ease
+    margin-right: 8px
+  .label
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    color: $menu-bg
+    font:
+      weight: 500
+      size: 16px
+  .radio-inp
+    &:checked
+      + .radio-custom
+        background: $accent
+        border-color: $accent
+        &::before
+          content: ""
+          display: block
+          position: absolute
+          top: 5px
+          right: 0
+          bottom: 0
+          left: 0
+          margin: 0 auto
+          width: 8px
+          height: 8px
+          background: #000
+          border-radius: 50%
+//radio end
+
+//list-brands
+.list-brands
+  li
+    margin-bottom: 12px
+    &:last-child
+      margin: 0
+
+.filter-box__brands
+  max-height: 148px
+  overflow-y: scroll
+//list-brands end
+
+
+//sidebar
+.sidebar
+  background: #F2F4F5
+  width: 280px
+  .box
+    padding: 24px
+    box-sizing: border-box
+    border:
+      bottom: 1px solid #D2D5D6
+    &:last-child
+      border: none
+    h3
+      text-transform: uppercase
+      color: $input-border-focus
+      margin-bottom: 16px
+      font:
+        weight: 600
+        size: 16px
+//sidebar end
+
+
+//select
+.select-group
+  position: relative
+  .box-active
+    cursor: pointer
+    outline: none
+    border: none
+    -moz-appearance: none
+    -webkit-appearance: none
+    background: transparent
+    color: $menu-bg
+    font:
+      weight: 500
+      size: 14px
+    padding-right: 14px
+  .arrow
+    position: absolute
+    right: 0
+    top: 7px
+  .dropdown-menu
+    top: 23px
+    min-width: 55px
+//select end
+
+//ползунок цен
+.range_val
+  position: relative
+  margin: 19px 0 0
+  input
+    width: 50%
+    height: auto
+    border: none
+      radius: 0
+    background: transparent
+    box-sizing: border-box
+    padding: 0
+    color: $menu-bg
+    cursor: pointer
+    font:
+      size: 16px
+      weight: 500
+    &:last-child
+      text-align: right
+  .inp-group
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+.slider-range
+  height: 8px
+  background: #D2D5D6
+  position: relative
+  border-radius: 5px
+
+.ui-state-default, .ui-slider-handle
+  width: 20px
+  height: 20px
+  box-sizing: border-box
+  background: #F2F4F5
+  display: inline-block
+  position: absolute
+  outline: none
+  top: -6px
+  cursor: pointer
+  border: 6px solid $menu-bg
+    radius: 50%
+
+
+.ui-widget-content
+  background: #e6e6e6
+
+.ui-widget-header
+  background: $accent!important
+  height: 8px!important
+  border: none!important
+  left: 0
+  top: 0
+  position: absolute
+//ползунок цен end
+
+//page-content
+.page-content
+  h2
+    text-align: left
+    margin: 0 0 24px
+  
+.page-content__wrapper
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-start
+
+//page-content end
+
+//catalog__wrapper
+.catalog__wrapper
+  width: calc(100% - 315px)
+  margin-top: -53px
+
+.catalog__wrapper-top
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  flex-wrap: wrap
+
+.catalog__wrapper-bottom
+  margin: 34px 0 0 0
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+
+.catalog-card
+  width: 280px
+  border: 1px solid #F2F4F5
+  padding: 16px 32px
+  margin: 0 0 32px
+  .image
+    width: 216px
+    height: 216px
+  .icon-favorites
+    top: 16px
+    right: 16px
+  .box-new, .box-sale
+    left: 16px
+    top: 16px
+
+  &:hover
+    border-color: transparent
+//catalog__wrapper end
+
+//stock
+.box-stock
+  display: flex
+  flex-direction: row
+  align-items: center
+  font:
+    weight: 500
+    size: 12px
+  margin: 0 0 7px
+  .icon-check
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 4px
+    svg
+      stroke: #fff
+      width: 6px
+      height: 5px
+      path
+        fill: #fff
+.in-stock
+  color: #41A317
+  .icon-check
+    background: #41A317
+
+.box-expected
+  color: #F3960B
+  .icon-check
+    background: #F3960B
+//stock end
+
+//breadcrumbs
+.breadcrumbs-wrapper
+  width: 100%
+.breadcrumbs
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+  margin: 24px 0 32px
+  li
+    a
+      position: relative
+      display: flex
+      flex-direction: row
+      align-items: center
+      font:
+        weight: 500
+        size: 14px
+      .icon
+
+        margin: 0 9px
+        svg
+          width: 9px
+          height: 9px
+          path
+            fill: #7A7F85
+      &:hover
+        color: $accent
+    span
+      font:
+        weight: 500
+        size: 14px
+//breadcrumbs end
+
+//line-sorting
+.line-sorting
+  display: flex
+  flex-direction: row
+  align-items: center
+  font:
+    weight: 500
+    size: 14px
+  p
+    color: #7A7F85
+    margin-right: 5px
+
+//line-sorting end
+
+
+//pagination
+.pagination
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin: 0 auto 80px
+  li
+    margin: 0 4px
+    a, span
+      transition: .3s ease
+      color: #65767C
+      font:
+        size: 16px
+        weight: 500
+      width: 40px
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      box-sizing: border-box
+      border: 1px solid #D2D5D6
+        radius: 3px
+      background: transparent
+      svg
+        path
+          fill: #ADB0B2
+      &:hover
+        background: #90A4AB
+        border-color: #90A4AB
+        color: #fff
+        svg
+          path
+            fill: #fff
+  .arrow-left
+    svg
+      transform: rotate(180deg)
+
+  .active
+    a
+      background: #90A4AB
+      border-color: #90A4AB
+      color: #fff
+//pagination end
+
+
+//product-image
+.product-image
+  display: flex
+  flex-direction: row
+
+.product-image__min
+  display: flex
+  flex-direction: column
+  align-items: center
+  .click-item.item
+    opacity: 1
+  .item
+    width: 72px
+    height: 72px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 8px
+    cursor: pointer
+    transition: .3s ease
+    opacity: .6
+    &:last-child
+      margin: 0
+
+.product-image__max
+  position: relative
+  width: 496px
+  height: 496px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-left: 24px
+  overflow: hidden
+  .box-sale
+    right: 0
+    top: 0
+    left: auto
+//product-image end
+
+//product-page__content
+.product-page__content
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  width: 100%
+//product-page__content end
+
+//product-description
+.product-description
+  width: 384px
+  .line
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+  .title
+    margin: 9px 0 24px
+    font:
+      family: 'Poppins', sans-serif
+      weight: 600
+      size: 32px
+    color: #30353B
+    line-height: 44px
+  .description
+    font:
+      size: 14px
+      weight: 500
+    color: #30353B
+  .price
+    margin: 17px 0
+    .new-price
+      font-size: 24px
+      &:before
+        display: none
+    .old-pride
+      font:
+        size: 20px
+  .add-card
+    width: 70%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+
+
+
+.article
+  color: #7A7F85
+  font-size: 12px
+//product-description end
+
+//color-selection
+.color-selection
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin: 0 0 17px 0
+  p
+    font:
+      size: 14px
+      weight: 500
+    color: #7A7F85
+    margin-right: 5px
+//color-selection end
+
+//box-availability
+.box-availability
+  display: flex
+  flex-direction: row
+  align-items: center
+  background: #F2F4F5
+  border-radius: 3px
+  padding: 11px 16px
+  box-sizing: border-box
+  margin: 0 0 16px 0
+  .box-stock
+    margin: 0 0 0 5px
+//box-availability end
+
+
+//product-page
+.product-page
+  .container
+    width: 1040px
+  .advantages
+    margin: 30px 0 48px 0
+    width: 100%
+    border: 1px solid #D2D5D6
+      radius: 3px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    .advantages-top, .advantages-bottom
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      padding: 16px 48px
+      margin: 0
+      border:
+        bottom: 1px solid #D2D5D6
+      .advantages__item
+        max-width: 190px
+    .advantages-bottom
+      border: none
+      .box
+        display: flex
+        flex-direction: row
+        align-items: center
+      .box-left
+        color: #41A317
+        p
+          font-weight: 500
+          margin: 0 5px 0 10px
+        a
+          text-decoration-line: underline
+          color: #30353B
+          font-weight: 500
+      .box-social
+        display: flex
+        flex-direction: row
+        align-items: center
+        p
+          color: #7A7F85
+          font-weight: 500
+          margin-right: 7px
+//product-page end
+
+//list-social
+.social-list
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  li
+    margin-right: 4px
+    &:last-child
+      margin: 0
+//list-social end
+
+//amount
+.amount
+  width: 96px
+  height: 40px
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  border: 1px solid #D2D5D6
+    radius: 3px
+  box-sizing: border-box
+  padding: 0 8px
+  input
+    border: none
+      radius: 0
+    text-align: center
+    padding: 0
+    width: 50px
+    font:
+      size: 16px
+    color: #30353B
+  span
+    width: 12px
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+//amount end
+
+//payment-variable
+.payment-variable
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 12px 0 0 0
+  p
+    text-align: center
+    color: #7A7F85
+    font:
+      size: 14px
+      weight: 500
+    margin-bottom: 12px
+
+.list-payment
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  li
+    a
+      width: 122px
+      height: 40px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 1px solid #90A4AB
+        radius: 3px
+
+//payment-variable end
+
+//tabs
+.tabs__content
+  display: none
+  flex-direction: column
+  align-items: flex-start
+  padding: 35px 0 0 0
+  box-sizing: border-box
+  h3
+    font:
+      weight: 600
+      size: 18px
+    color: #30353B
+    margin: 0 0 16px
+    width: 100%
+  .description
+    max-width: 800px
+    color: #50565C
+    p
+      margin-bottom: 15px
+      line-height: 24px
+      &:last-child
+        margin: 0
+
+.tabs__content.active
+  display: flex
+
+.tabs
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin: 0 0 80px 0
+  .tabs__caption
+    width: 100%
+    padding: 0
+    box-sizing: border-box
+    background: #F2F4F5
+    border-radius: 3px 3px 0 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    li
+      color: #7A7F85
+      font:
+        weight: 600
+        family: Poppins, sans-serif
+        size: 16px
+      padding: 15px 20px 11px
+      box-sizing: border-box
+      border:
+        bottom: 2px solid transparent
+      cursor: pointer
+      transition: .3s ease
+    .active
+      color: #30353B
+      border-color: #30353B
+//tabs end
+
+//list-specifications
+.list-specifications
+  display: flex
+  flex-direction: column
+  width: 100%
+  li
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    border:
+      bottom: 1px solid #F2F4F5
+    box-sizing: border-box
+    padding: 10px
+    color: #30353B
+    p
+      width: 300px
+    span
+      font-weight: 500
+//list-specifications end
+
+
+//similar-products
+.similar-products
+  background: #F2F4F5
+  .slide
+    margin: 14px 0 80px
+//similar-products end
+
+
+.box-mobile
+  display: none
+
+//page-basket__left
+.page-basket__left
+  width: calc(100% - 416px)
+  .payment-variable
+    width: 384px
+    margin: 0 auto
+    .btn-accent
+      width: 100%
+      height: 56px
+      margin: 0 auto 12px
+      align-items: center
+      justify-content: center
+      display: flex
+//page-basket__left end
+
+//page-basket__right
+.page-basket__right
+  border: 1px solid #F2F4F5
+    radius: 3px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  width: 384px
+  .page-basket__right-top
+    padding: 24px
+    box-sizing: border-box
+    border:
+      bottom: 1px solid #F2F4F5
+    .advantages__item
+      margin-bottom: 8px
+      &:last-child
+        margin: 0
+  .page-basket__right-method-payment
+    padding: 24px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    p
+      text-align: center
+      color: #30353B
+      font-weight: 500
+      margin-bottom: 16px
+//page-basket__right end
+
+
+//list-method-payment
+.list-method-payment
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  li
+    margin: 0 8px
+//list-method-payment end
+
+//page-basket
+.page-basket
+  margin: 64px 0 80px 0
+  .breadcrumbs-wrapper
+    display: none
+//page-basket  end
+
+
+//orders-basket
+.orders-basket
+  display: flex
+  flex-direction: column
+  .line.line-title
+    padding: 11px 0
+    color: #7A7F85
+    .box
+      &:first-child
+        padding-left: 38px
+  .line
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    padding: 28px 0
+    color: #30353B
+    box-sizing: border-box
+    border:
+      bottom: 1px solid #D2D5D6
+    .image
+      width: 64px
+      height: 64px
+      margin: 0 11px 0 24px
+    .box
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex-wrap: nowrap
+      font:
+        weight: 500
+        size: 16px
+      &:nth-child(2)
+        width: 100px
+        text-align: center
+        justify-content: center
+        margin: 0 100px 0 auto
+      &:nth-child(3)
+        width: 100px
+        justify-content: flex-end
+      .close
+        position: relative
+        left: 0
+        top: 0
+    .total-price
+      font:
+        weight: 600
+        size: 16px
+  .line.line-delivery
+    flex-direction: column
+    border:
+      bottom: none
+    .box
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      margin-bottom: 12px
+      &:last-child
+        margin: 0
+      .total-price
+        margin-left: auto
+      .icon
+        margin-right: 12px
+  .line-total
+    border:
+      bottom: none
+      top: 2px solid #7A7F85
+    .total-price
+      font-size: 22px
+//orders-basket end
+
+
+//shipping-selection
+.shipping-selection
+  display: flex
+  flex-direction: row
+  align-items: center
+  font-weight: normal
+  font:
+    weight: normal
+    size: 14px
+  p
+    color: #7A7F85
+    margin-right: 5px
+  .box-active
+    font:
+      size: 14px
+    padding-right: 14px
+    color: #30353B
+    position: relative
+    cursor: pointer
+  .dropdown-menu
+    top: 19px
+//shipping-selection end
+
+//discount
+.discount
+  display: flex
+  flex-direction: row
+  align-items: center
+  flex-wrap: wrap
+  color: #7A7F85
+  p
+    margin-right: 10px
+    font-weight: normal
+//discount end
+
+//form-discount
+.form-discount
+  display: flex
+  flex-direction: row
+  align-items: center
+  input
+    width: 240px
+    font:
+      size: 14px
+    height: 32px
+    color: #7A7F85
+  button
+    margin-left: 8px
+    width: 72px
+    height: 32px
+//form-discount end
+
+
+//page-checkout
+.page-checkout
+  margin: 80px 0
+  .container
+    width: 1045px
+    margin: 0 auto
+  .description
+    color: #50565C
+    font:
+      family: 'Poppins', sans-serif
+      size: 16px
+    display: flex
+    flex-direction: row
+    margin-bottom: 16px
+    a
+      text-decoration-line: underline
+      font-weight: 600
+      margin-left: 5px
+      color: #30353B
+  .breadcrumbs-wrapper
+    display: none
+//page-checkout end
+
+//page-checkout__left
+.page-checkout__left
+  width: 488px
+  .box
+    display: flex
+    flex-direction: column
+    width: 100%
+    border: 1px solid #F2F4F5
+      radius: 3px
+    box-sizing: border-box
+    margin-bottom: 16px
+    .box-title
+      background: #F2F4F5
+      border-radius: 3px 3px 0 0
+      box-sizing: border-box
+      padding: 16px
+      display: flex
+      flex-direction: row
+      align-items: center
+      h3
+        margin-left: 16px
+        font:
+          family: 'Poppins', sans-serif
+          size: 16px
+          weight: 600
+        color: #30353B
+      .icon
+        width: 24px
+    .box-body
+      padding: 24px 40px
+      box-sizing: border-box
+  .btn-accent
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: center
+    width: 200px
+    height: 56px
+
+//page-checkout__left end
+
+
+//form-checkout
+.form-checkout
+  .checkbox
+    display: flex
+  .line.line-city
+    label
+      width: 40%
+      &:nth-child(1)
+        width: 58%
+  .line
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    margin-bottom: 8px
+    label
+      width: 48%
+      position: relative
+      margin: 0
+  label
+    margin-bottom: 8px
+    display: block
+  input
+    font:
+      weight: normal
+      size: 16px
+    color: #7A7F85
+    height: 40px
+  .select-group
+    border: 1px solid #D2D5D6
+      radius: 3px
+    box-sizing: border-box
+    margin-bottom: 8px
+    cursor: pointer
+    height: 40px
+    transition: .3s ease
+    .dropdown-menu
+      top: 39px
+    &:hover
+      border-color: $input-color
+    .arrow
+      right: 15px
+      top: 17px
+    .box-active
+      padding: 10px 16px
+      width: 100%
+      font:
+        size: 16px
+        weight: normal
+      color: #7A7F85
+  .radio
+    margin-bottom: 24px
+  .line.line-number-card
+    flex-direction: row
+    .left, .right
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex-wrap: wrap
+      font-size: 16px
+    input
+      width: 56px
+      text-align: center
+      margin-left: 8px
+      padding: 0
+//form-checkout end
+
+
+//page-checkout__right
+.page-checkout__right
+  width: 486px
+//page-checkout__right end
+
+//shopping-basket
+.shopping-basket
+  background: #F2F4F5
+  border-radius: 3px
+  box-sizing: border-box
+  width: 100%
+  padding: 32px
+  .popup-header
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    padding: 0
+  .basket__popup-title
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: #30353B
+    line-height: 24px
+    font:
+      size: 16px
+      family: 'Poppins', sans-serif
+      weight: 600
+    span
+      margin-left: 5px
+  .links
+    color: #7A7F85
+    font:
+      weight: normal
+      size: 14px
+    cursor: pointer
+  .popup-body
+    margin-top: 8px
+    .card-list
+      padding: 23px 0
+      border:
+        bottom: 1px solid #D2D5D6
+  .popup-footer
+    padding: 24px 0 0 0
+    .box
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      color: #30353B
+      font:
+        weight: 500
+        size: 16px
+      margin-bottom: 10px
+      span
+        font-weight: 600
+    .card-total
+      justify-content: space-between
+      display: flex
+      flex-direction: row
+      width: 100%
+      margin: 0
+      font:
+        weight: bold
+        size: 18px
+
+//shopping-basket end
+
+
+//necessarily
+.necessarily
+  position: relative
+  .placeholder
+    position: absolute
+    left: 0
+    top: 0
+    padding: 0 12px
+    height: 100%
+    width: 100%
+    display: flex
+    align-items: center
+    transition: .3s ease
+    font:
+      family: 'Barlow', sans-serif
+      size: 16px
+    color: #7A7F85
+    .star
+      color: #E2141B
+      margin-left: 5px
+
+.form-control
+  &:focus ~ .placeholder, &:valid ~ .placeholder
+    display: none
+  &:hover ~ .placeholder
+    color: $input-color
+//necessarily end
+
+//box-credit-card
+.box-credit-card
+  display: none
+//box-credit-card end
+
+.fancybox-arrow
+  opacity: 1
+  &:after
+    background: transparent
+    font-family: 'fontawesome', sans-serif
+    color: #fff
+    opacity: 1
+    content: '\f105'
+
+.fancybox-button
+  background: transparent
+
+
+@import "media"
+// Всегда в конце
